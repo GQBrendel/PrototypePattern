@@ -1,18 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Skeleton : MonoBehaviour
+public class Skeleton : Monster
 {
-    // Start is called before the first frame update
-    void Start()
+    public Skeleton(string name, int attack, int defense, Sprite sprite) : base(name, attack, defense, sprite)
     {
-        
     }
-
-    // Update is called once per frame
-    void Update()
+    public override Monster Clone()
     {
-        
+        return new Skeleton(Name, Defense, Attack, Sprite);
     }
 }

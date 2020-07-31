@@ -1,18 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Demon : MonoBehaviour
+public class Demon : Monster
 {
-    // Start is called before the first frame update
-    void Start()
+    public Demon(string name, int attack, int defense, Sprite sprite) : base(name, attack, defense, sprite)
     {
-        
     }
-
-    // Update is called once per frame
-    void Update()
+    public override Monster Clone()
     {
-        
+        return new Demon(Name, Defense, Attack, Sprite);
     }
 }

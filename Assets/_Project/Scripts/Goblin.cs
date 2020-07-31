@@ -1,10 +1,12 @@
-﻿public class Goblin : Monster
+﻿using UnityEngine;
+
+public class Goblin : Monster
 {
-    public Goblin(int health, int speed) : base(health, speed)
+    public Goblin(string name, int attack, int defense, Sprite sprite) : base(name, attack, defense, sprite)
     {
     }
     public override Monster Clone()
     {
-        return new Goblin(Health, Speed);
+        return new Goblin(Name, Defense, Attack, Sprite);
     }
 }
